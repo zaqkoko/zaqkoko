@@ -11,4 +11,3 @@ $sql = "
 ";
 mysqli_query($conn, $sql);
 echo $sql;
-?>
