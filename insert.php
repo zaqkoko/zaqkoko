@@ -14,6 +14,7 @@ $sql = "
      NOW()
   )";
 
+  mysqli_query($conn, $sql);
 // mysqli_query = mysqli_connect를 통해 연결된 객체를 이용하며 mysql 쿼리를 실행시키는 함수
 $result = mysqli_query($conn, $sql);
 
