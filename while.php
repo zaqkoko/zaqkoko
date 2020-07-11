@@ -15,10 +15,10 @@ $sql = "SELECT * FROM topic";
 $result = mysqli_query($conn, $sql);
 
 // mysqli_fetch_array = mysqli_query를 통해 얻은 값에서 레코드를 1개씩 리턴해주는 함수
-$row = mysqli_fetch_array($result);
-echo '<h2>' . $row['title'] . '</h2>';
-echo $row['description'];
+// while - $row 의 값이 있을 때까지 돌려라. NULL값이면 while 종료. php문에서 NULL값은 false로 취급함.
+while($row = mysqli_fetch_array($result)){
+    echo '<h2>' . $row['title'] . '</h2>';
+    echo $row['description'];
+}
 
-$row = mysqli_fetch_array($result);
-echo '<h2>' . $row['title'] . '</h2>';
-echo $row['description'];
+?>
